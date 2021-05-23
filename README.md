@@ -1,6 +1,3 @@
-# JiangsuProvice_OpenUniversity_NetCourseScript
-
----
 
 ### 1、摘要
 
@@ -33,8 +30,8 @@
 
 4、长时间无回显，和3的情况相同，也可能是自己网络原因，因为没有设置timeout参数。
 
----
 ## MIT License
+```
 MIT License
 
 Copyright (c) 2021 JdeshengKno
@@ -56,4 +53,5 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+```
 
