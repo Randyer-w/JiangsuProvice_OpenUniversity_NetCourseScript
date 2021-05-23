@@ -23,8 +23,8 @@ def Start_Login():
     '''
     ValueData,Req_Cookie = Get_PostData(LoginUrl)
     Post_data = {
-        "username":###########,#用户名
-        "password":###########,#密码
+        "username":213208130117912,#用户名
+        "password":655031,#密码
         "lt":ValueData[0],
         "execution":ValueData[1],
         "_eventId":ValueData[2],
@@ -83,11 +83,6 @@ def M_Heart():#获取各个课程下属全部视频信息并且构造数据包�
                     with open("PostData.txt","a+") as f:
                         f.write(str(Post_Data0)+"\n")#写入数据包
     print("写入完成,请重新运行脚本")
-def get_content_length(data):
-    length = len(data.keys()) * 2 - 1
-    total = ''.join(list(data.keys()) + list(data.values()))
-    length += len(total)
-    return length
 def SetToken():#根据网站逆向得出Token算法
     len_ = 8.or(32)
     Salt = "ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678"
@@ -112,6 +107,9 @@ def Start_Run():
         Repo = requests.post(HeartBeatUrl,headers=LoginHeaders,data=eval(P_E)).json()
         if(Repo["code"]=="SUCCESS"):
             print("刷课运行正常，正在进行第{}个视频\n".format(Count))
+        else:
+            print("respone返回错误，刷课终止.")
+            exit(0)
     Count=0
 if __name__ == "__main__":
 
@@ -120,7 +118,6 @@ if __name__ == "__main__":
     CourseUrl = "http://xuexi.jsou.cn/jxpt-web/student/courseuser/getAllCurrentCourseByStudent"
     HeartBeatUrl = "http://xuexi.jsou.cn/jxpt-web/common/learningBehavior/heartbeat"
     LoginHeaders = {"Host":"xuexi.jsou.cn","Cookie":Start_Login(),"Content-Type":"application/x-www-form-urlencoded; charset=UTF-8"}
-    print(LoginHeaders)
     if(os.path.exists("PostData.txt")==False):
         M_Heart()
     else:
