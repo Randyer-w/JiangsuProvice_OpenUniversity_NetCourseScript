@@ -23,8 +23,8 @@ def Start_Login():
     '''
     ValueData,Req_Cookie = Get_PostData(LoginUrl)
     Post_data = {
-        "username":213208130117912,#用户名
-        "password":655031,#密码
+        "username":#####,#用户名
+        "password":#####,#密码
         "lt":ValueData[0],
         "execution":ValueData[1],
         "_eventId":ValueData[2],
